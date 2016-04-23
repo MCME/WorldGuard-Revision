@@ -38,8 +38,8 @@
 #################
 # Global Block  #
 #################
-#MobSpawner 52|SpawnEgg 383[60 to 120 and 384 to 392]|ExpPotion 393|Minecarts 416,417,425:6|
-[52,383:60-120,384,385,386,387,388,389,390,391,392,393,416,417,425:6]
+#MobSpawner 52|SpawnEgg 383[50 to 120]|ExpPotion 384|Minecarts 407,408,422|
+[52,383:50-120,407,408,422]
 #comment=a restricted item is being used.
 message=%s is blocked.
 on-break=deny,tell,log
@@ -67,6 +67,9 @@ on-dispense=deny,tell,log
 ###################################
 # Restrict except Artist, Designer#
 ###################################
+###################################
+#      Redstone Restrictions      #
+################################### 
 #################
 ##1.9 Section####
 #################
