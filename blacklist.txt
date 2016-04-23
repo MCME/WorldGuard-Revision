@@ -20,17 +20,38 @@
 #kick - kick player
 #ban - ban player
 #################################################################################################
-#Example below
-#Block PLACE|BREAK|INTERACT|ACQUIRE|USE except for designer (and groups along the pedigree) and root
-#Bedrock(7) Water(8,9)
-[7,8,9]
-ignore-groups=root,designer
-comment=a restricted item is being used.
-message=dear user you are not allowed to do that with %s.
-on-break=deny,tell,log
+##Example below
+##Block PLACE|BREAK|INTERACT|ACQUIRE|USE except for designer (and groups along the pedigree) and root
+##Bedrock(7) Water(8,9)
+#[7,8,9]
+#ignore-groups=root,designer
+#comment=a restricted item is being used.
+#message=dear user you are not allowed to do that with %s.
+#on-break=deny,tell,log
 #on-destroy-with=
+#on-place=deny,tell,log
+#on-use=deny,tell,log
+#on-interact=deny,tell,log
+#on-drop=deny,tell,log
+#on-acquire=deny,tell,log
+#on-dispense=deny,tell,log
+#################
+# Global Block  #
+#################
+#MobSpawner 52 
+[52]
+#comment=a restricted item is being used.
+#message=dear user you are not allowed to do that with %s.
+on-break=deny,tell,log
 on-place=deny,tell,log
 on-use=deny,tell,log
 on-interact=deny,tell,log
 on-drop=deny,tell,log
 on-acquire=deny,tell,log
+on-dispense=deny,tell,log
+###################################
+# Restrict Interaction and Usage  #
+###################################
+#################
+##1.9 Section####
+#################
