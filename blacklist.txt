@@ -22,8 +22,8 @@
 #################################################################################################
 ##Example below
 ##Block PLACE|BREAK|INTERACT|ACQUIRE|USE except for designer (and groups along the pedigree) and root
-##Bedrock(7) Water(8,9)
-#[7,8,9]
+##Bedrock(7)|Water(8,9)|Barrier(166)
+#[7,8,9,166]
 #ignore-groups=root,designer
 #comment=a restricted item is being used.
 #message=dear user you are not allowed to do that with %s.
@@ -35,9 +35,9 @@
 #on-drop=deny,tell,log
 #on-acquire=deny,tell,log
 #on-dispense=deny,tell,log
-#################
-# Global Block  #
-#################
+#############################
+# Global Block / BLOCK ALL  #
+#############################
 #MobSpawner 52|SpawnEgg 383[50 to 120]|ExpPotion 384|Minecarts 407,408,422|
 [52,383:50-120,407,408,422]
 #comment=a restricted item is being used.
@@ -52,8 +52,8 @@ on-dispense=deny,tell,log
 ###################################
 # Restrict Interaction and Usage  #
 ###################################
-#Bedrock 7|Water 8,9|Lava 10,11|Buckets 325,326,327|
-[7,8,9,10,11,325,326,327]
+#Bedrock 7|Water 8,9|Lava 10,11|Buckets 325,326,327|Barrier(166)|
+[7,8,9,10,11,325,326,327,166]
 ignore-groups=root,designer,artist
 comment=a restricted item is being used.
 message=%s is blocked.
@@ -69,7 +69,22 @@ on-dispense=deny,tell,log
 ###################################
 ###################################
 #      Redstone Restrictions      #
-################################### 
+###################################
+#Impulse Commandblock(137)|Redstone Dust(331)|Carts (328,342,343,407,408,422)|Repeater(356)|Comparator(404)
+[137,331,328,342,343,407,408,422,356,404]
+ignore-groups=root
+comment=a restricted item is being used.
+message=%s is blocked.
+on-break=deny,tell,log
+on-place=deny,tell,log
+on-use=deny,tell,log
+on-interact=deny,tell,log
+on-drop=deny,tell,log
+on-acquire=deny,tell,log
+on-dispense=deny,tell,log
 #################
 ##1.9 Section####
+#################
+#################
+##1.10 Section ##
 #################
