@@ -85,6 +85,18 @@ on-dispense=deny,tell,log
 #################
 ##1.9 Section####
 #################
+#Structure Block(255)|Elytra(443)
+[255,443]
+ignore-groups=root
+comment=a restricted item is being used.
+message=%s is blocked.
+on-break=deny,tell,log
+on-place=deny,tell,log
+on-use=deny,tell,log
+on-interact=deny,tell,log
+on-drop=deny,tell,log
+on-acquire=deny,tell,log
+on-dispense=deny,tell,log
 #################
 ##1.10 Section ##
 #################
