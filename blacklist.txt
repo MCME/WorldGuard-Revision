@@ -1,40 +1,3 @@
-#################################################################################################
-##Options
-#ignore-groups - a comma-separated list of groups to not affect
-#ignore-perms a comma-separated list of permissions to not affect (made.up.permission)
-#comment - a message for administrators that is printed with 'log' and 'notify' actions
-#message - an optional message to show the user instead for the 'tell' action; %s can be used in the message to substitute item name
-##Events
-#on-break - when a block of this type is about to be broken
-#on-destroy-with - the item/block held by the user while destroying
-#on-place - when a block is being placed
-#on-use - when an item is being used (lighters, buckets)
-#on-interact - when a block is being interacted with (chests, pressure plates, etc.)
-#on-drop - the item is being dropped from the player's inventory
-#on-acquire - the item enters a player's inventory via some method
-##Actions
-#deny - deny completely
-#notify - notify admins (who have the /worldguardnotify permission)
-#log - log to console/file/database
-#tell - tell a player that that's not allowed
-#kick - kick player
-#ban - ban player
-#################################################################################################
-##Example below
-##Block PLACE|BREAK|INTERACT|ACQUIRE|USE except for designer (and groups along the pedigree) and root
-##Bedrock(7)|Water(8,9)|Barrier(166)
-#[7,8,9,166]
-#ignore-groups=root,designer
-#comment=a restricted item is being used.
-#message=dear user you are not allowed to do that with %s.
-#on-break=deny,tell,log
-#on-destroy-with=
-#on-place=deny,tell,log
-#on-use=deny,tell,log
-#on-interact=deny,tell,log
-#on-drop=deny,tell,log
-#on-acquire=deny,tell,log
-#on-dispense=deny,tell,log
 #############################
 # Global Block / BLOCK ALL  #
 #############################
@@ -54,7 +17,7 @@ on-dispense=deny,tell,log
 ###################################
 #Bedrock 7|Water 8,9|Lava 10,11|Buckets 325,326,327|Barrier(166)|
 [7,8,9,10,11,325,326,327,166]
-ignore-groups=root,designer,artist
+ignore-groups=root,designer,artist,enforcer
 comment=a restricted item is being used.
 message=%s is blocked.
 on-break=deny,tell,log
@@ -100,3 +63,52 @@ on-dispense=deny,tell,log
 #################
 ##1.10 Section ##
 #################
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#################################################################################################
+##Options
+#ignore-groups - a comma-separated list of groups to not affect
+#ignore-perms a comma-separated list of permissions to not affect (made.up.permission)
+#comment - a message for administrators that is printed with 'log' and 'notify' actions
+#message - an optional message to show the user instead for the 'tell' action; %s can be used in the message to substitute item name
+##Events
+#on-break - when a block of this type is about to be broken
+#on-destroy-with - the item/block held by the user while destroying
+#on-place - when a block is being placed
+#on-use - when an item is being used (lighters, buckets)
+#on-interact - when a block is being interacted with (chests, pressure plates, etc.)
+#on-drop - the item is being dropped from the player's inventory
+#on-acquire - the item enters a player's inventory via some method
+##Actions
+#deny - deny completely
+#notify - notify admins (who have the /worldguardnotify permission)
+#log - log to console/file/database
+#tell - tell a player that that's not allowed
+#kick - kick player
+#ban - ban player
+#################################################################################################
+##Example below
+##Block PLACE|BREAK|INTERACT|ACQUIRE|USE except for designer (and groups along the pedigree) and root
+##Bedrock(7)|Water(8,9)|Barrier(166)
+#[7,8,9,166]
+#ignore-groups=root,designer
+#comment=a restricted item is being used.
+#message=dear user you are not allowed to do that with %s.
+#on-break=deny,tell,log
+#on-destroy-with=
+#on-place=deny,tell,log
+#on-use=deny,tell,log
+#on-interact=deny,tell,log
+#on-drop=deny,tell,log
+#on-acquire=deny,tell,log
+#on-dispense=deny,tell,log
