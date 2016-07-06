@@ -2,7 +2,7 @@
 # Global Block / BLOCK ALL  #
 #############################
 #MobSpawner 52|SpawnEgg 383[50 to 120]|ExpPotion 384|Minecarts 407,408,422|
-[52,383:50-120,407,408,422]
+[52,383:50-120,384,407,408,422]
 #comment=a restricted item is being used.
 message=%s is blocked.
 on-break=deny,tell,log
