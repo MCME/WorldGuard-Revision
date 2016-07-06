@@ -61,6 +61,10 @@ on-drop=deny,tell,log
 on-acquire=deny,tell,log
 on-dispense=deny,tell,log
 #################
+## Perks ##
+#################
+#Block Elytra 443
+#################
 ##1.10 Section ##
 #################
 #
