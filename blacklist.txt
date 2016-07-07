@@ -15,8 +15,8 @@ on-dispense=deny,tell,log
 ###################################
 # Restrict Interaction and Usage  #
 ###################################
-#Bedrock 7|Water 8,9|Lava 10,11|Buckets 325,326,327|Barrier(166)|
-[7,8,9,10,11,325,326,327,166]
+#Bedrock 7|Buckets 325,326,327|Barrier(166)|
+[7,325,326,327,166]
 ignore-groups=root,designer,artist,enforcer
 comment=a restricted item is being used.
 message=%s is blocked.
